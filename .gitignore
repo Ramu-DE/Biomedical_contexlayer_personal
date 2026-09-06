@@ -1,0 +1,26 @@
+# Secrets
+.env
+*.pem
+*.key
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local artifacts
+*.log
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

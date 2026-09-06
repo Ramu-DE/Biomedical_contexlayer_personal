@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <!-- Gradient for WRITES side -->
+    <linearGradient id="writesGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8e0f0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f0eef5;stop-opacity:0.3"/>
+    </linearGradient>
+    <!-- Gradient for READS side -->
+    <linearGradient id="readsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#edf2fc;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#d8e6fa;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Grid pattern for WRITES -->
+    <pattern id="writeGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#c4b8d9" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+    <!-- Grid pattern for READS -->
+    <pattern id="readGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94b4e0" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000015"/>
+    </filter>
+    <filter id="shadowDeep" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="#f5f3f8"/>
+
+  <!-- WRITES side - flowing lines + grid -->
+  <rect x="0" y="0" width="320" height="900" fill="url(#writesGrad)"/>
+  <rect x="40" y="100" width="250" height="700" fill="url(#writeGrid)" opacity="0.6" rx="4"/>
+
+  <!-- WRITES flowing curves (data pipelines) -->
+  <g opacity="0.6">
+    <!-- Dark curves (raw data) -->
+    <path d="M 30,180 C 150,180 200,200 310,260" fill="none" stroke="#4a3870" stroke-width="2.5" opacity="0.7"/>
+    <path d="M 20,240 C 130,230 190,270 310,310" fill="none" stroke="#4a3870" stroke-width="2" opacity="0.6"/>
+    <path d="M 40,300 C 140,290 200,330 310,370" fill="none" stroke="#5a4880" stroke-width="2.5" opacity="0.7"/>
+    <path d="M 25,380 C 140,370 210,400 310,440" fill="none" stroke="#4a3870" stroke-width="1.8" opacity="0.5"/>
+    <path d="M 50,450 C 150,440 220,470 310,500" fill="none" stroke="#5a4880" stroke-width="2.2" opacity="0.6"/>
+    <path d="M 30,530 C 140,520 200,550 310,570" fill="none" stroke="#4a3870" stroke-width="2" opacity="0.7"/>
+    <path d="M 45,600 C 150,590 210,620 310,640" fill="none" stroke="#5a4880" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 20,670 C 130,660 200,680 310,700" fill="none" stroke="#4a3870" stroke-width="2" opacity="0.6"/>
+    <!-- Light curves -->
+    <path d="M 60,150 C 160,160 230,220 310,280" fill="none" stroke="#8a7ab0" stroke-width="1.2" opacity="0.4"/>
+    <path d="M 55,500 C 160,490 230,520 310,540" fill="none" stroke="#8a7ab0" stroke-width="1.2" opacity="0.4"/>
+    <path d="M 35,720 C 140,710 220,730 310,750" fill="none" stroke="#8a7ab0" stroke-width="1" opacity="0.3"/>
+  </g>
+  <!-- Dots on WRITES curves -->
+  <circle cx="100" cy="200" r="3.5" fill="#6b5b95" opacity="0.7"/>
+  <circle cx="170" cy="280" r="3" fill="#6b5b95" opacity="0.6"/>
+  <circle cx="80" cy="370" r="4" fill="#6b5b95" opacity="0.7"/>
+  <circle cx="200" cy="430" r="3" fill="#6b5b95" opacity="0.5"/>
+  <circle cx="130" cy="550" r="3.5" fill="#6b5b95" opacity="0.6"/>
+  <circle cx="90" cy="650" r="3" fill="#6b5b95" opacity="0.7"/>
+  <circle cx="190" cy="700" r="4" fill="#6b5b95" opacity="0.5"/>
+
+  <!-- WRITES label -->
+  <text x="40" y="490" font-size="52" font-weight="700" fill="#5a3d8a" opacity="0.85"
+        transform="rotate(-90, 40, 490)" letter-spacing="8">WRITES</text>
+
+  <!-- READS side - flowing lines + grid -->
+  <rect x="1280" y="0" width="320" height="900" fill="url(#readsGrad)"/>
+  <rect x="1310" y="100" width="250" height="700" fill="url(#readGrid)" opacity="0.6" rx="4"/>
+
+  <!-- READS flowing curves -->
+  <g opacity="0.6">
+    <path d="M 1290,260 C 1380,200 1440,180 1560,170" fill="none" stroke="#2563eb" stroke-width="2.5" opacity="0.6"/>
+    <path d="M 1290,310 C 1400,270 1450,240 1570,230" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5"/>
+    <path d="M 1290,370 C 1380,340 1440,310 1560,290" fill="none" stroke="#3b82f6" stroke-width="2.5" opacity="0.6"/>
+    <path d="M 1290,440 C 1400,400 1460,380 1570,370" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.5"/>
+    <path d="M 1290,500 C 1380,470 1440,450 1560,440" fill="none" stroke="#3b82f6" stroke-width="2.2" opacity="0.6"/>
+    <path d="M 1290,570 C 1400,540 1460,520 1570,510" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5"/>
+    <path d="M 1290,640 C 1380,620 1450,600 1560,590" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 1290,700 C 1400,680 1460,660 1570,650" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.6"/>
+    <path d="M 1290,750 C 1390,730 1450,720 1560,710" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- Dots on READS curves -->
+  <circle cx="1500" cy="200" r="3.5" fill="#2563eb" opacity="0.7"/>
+  <circle cx="1430" cy="290" r="3" fill="#2563eb" opacity="0.6"/>
+  <circle cx="1520" cy="380" r="4" fill="#2563eb" opacity="0.7"/>
+  <circle cx="1460" cy="460" r="3" fill="#2563eb" opacity="0.5"/>
+  <circle cx="1510" cy="530" r="3.5" fill="#2563eb" opacity="0.6"/>
+  <circle cx="1450" cy="620" r="3" fill="#2563eb" opacity="0.7"/>
+  <circle cx="1530" cy="700" r="4" fill="#2563eb" opacity="0.5"/>
+
+  <!-- READS label -->
+  <text x="1560" y="390" font-size="52" font-weight="700" fill="#2563eb" opacity="0.85"
+        transform="rotate(90, 1560, 390)" letter-spacing="8">READS</text>
+
+  <!-- Central Ontology Panel -->
+  <rect x="330" y="50" width="940" height="800" rx="8" fill="#f8f7fa" stroke="#d4d0de" stroke-width="1.5" filter="url(#shadowDeep)"/>
+
+  <!-- ═══════════ ROW 1 ═══════════ -->
+
+  <!-- TestCase Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="365" y="85" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="365" y="85" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="380" y="107" font-size="15" font-weight="700" fill="#1a1a2e">TestCase</text>
+    <line x1="365" y1="117" x2="630" y2="117" stroke="#e8e6ed" stroke-width="1"/>
+    <!-- Properties -->
+    <rect x="375" y="124" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="393" y="134" font-size="12" fill="#555">test_id, category, module</text>
+    <!-- Functions -->
+    <text x="375" y="156" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="393" y="156" font-size="12" fill="#555">difficulty_score, disagreement</text>
+    <!-- Actions -->
+    <text x="378" y="178" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="393" y="178" font-size="12" fill="#555">rerun_test, flag_hard</text>
+    <!-- Automations -->
+    <text x="376" y="200" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="393" y="200" font-size="12" fill="#555">alert_if_all_judges_fail</text>
+  </g>
+
+  <!-- Judge Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="668" y="85" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="668" y="85" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="683" y="107" font-size="15" font-weight="700" fill="#1a1a2e">Judge</text>
+    <line x1="668" y1="117" x2="933" y2="117" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="678" y="124" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="696" y="134" font-size="12" fill="#555">method, model, label</text>
+    <text x="678" y="156" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="696" y="156" font-size="12" fill="#555">accuracy, false_pass_rate, cost</text>
+    <text x="681" y="178" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="696" y="178" font-size="12" fill="#555">promote, demote</text>
+    <text x="679" y="200" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="696" y="200" font-size="12" fill="#555">alert_on_accuracy_drift</text>
+  </g>
+
+  <!-- EvalRun Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="971" y="85" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="971" y="85" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="986" y="107" font-size="15" font-weight="700" fill="#1a1a2e">EvalRun</text>
+    <line x1="971" y1="117" x2="1236" y2="117" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="981" y="124" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="999" y="134" font-size="12" fill="#555">run_id, timestamp, count</text>
+    <text x="981" y="156" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="999" y="156" font-size="12" fill="#555">accuracy_by_judge, total_cost</text>
+    <text x="984" y="178" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="999" y="178" font-size="12" fill="#555">rerun_failed</text>
+    <text x="982" y="200" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="999" y="200" font-size="12" fill="#555">alert_on_regression</text>
+  </g>
+
+  <!-- Link labels Row 1 -->
+  <line x1="630" y1="172" x2="668" y2="172" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="637" y="166" font-size="9" fill="#888" font-weight="500">Link</text>
+  <line x1="933" y1="172" x2="971" y2="172" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="940" y="166" font-size="9" fill="#888" font-weight="500">Link</text>
+
+  <!-- ═══════════ ROW 2 (center row with ONTOLOGY) ═══════════ -->
+
+  <!-- Verdict Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="365" y="310" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="365" y="310" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="380" y="332" font-size="15" font-weight="700" fill="#1a1a2e">Verdict</text>
+    <text x="440" y="332" font-size="11" fill="#888">(132 objects)</text>
+    <line x1="365" y1="342" x2="630" y2="342" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="375" y="349" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="393" y="359" font-size="12" fill="#555">result, correct, latency_ms</text>
+    <text x="375" y="381" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="393" y="381" font-size="12" fill="#555">is_false_positive, cost_usd</text>
+    <text x="378" y="403" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="393" y="403" font-size="12" fill="#555">flag_bias, override</text>
+    <text x="376" y="425" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="393" y="425" font-size="12" fill="#555">escalate_false_positive</text>
+  </g>
+
+  <!-- ONTOLOGY center emblem -->
+  <g>
+    <rect x="668" y="310" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1.5" filter="url(#shadow)"/>
+    <!-- Ontology symbol -->
+    <g transform="translate(800, 370)">
+      <!-- Hexagonal geometry -->
+      <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#6b5b95" stroke-width="1.5" opacity="0.7"/>
+      <polygon points="0,-18 16,-9 16,9 0,18 -16,9 -16,-9" fill="none" stroke="#6b5b95" stroke-width="1" opacity="0.5"/>
+      <circle cx="0" cy="0" r="4" fill="#6b5b95" opacity="0.6"/>
+      <!-- Corner dots -->
+      <circle cx="0" cy="-30" r="2.5" fill="#6b5b95" opacity="0.5"/>
+      <circle cx="26" cy="-15" r="2.5" fill="#6b5b95" opacity="0.5"/>
+      <circle cx="26" cy="15" r="2.5" fill="#6b5b95" opacity="0.5"/>
+      <circle cx="0" cy="30" r="2.5" fill="#6b5b95" opacity="0.5"/>
+      <circle cx="-26" cy="15" r="2.5" fill="#6b5b95" opacity="0.5"/>
+      <circle cx="-26" cy="-15" r="2.5" fill="#6b5b95" opacity="0.5"/>
+    </g>
+    <text x="800" y="420" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e" letter-spacing="3">ONTOLOGY</text>
+    <text x="800" y="440" text-anchor="middle" font-size="11" fill="#6b5b95">BioMedical Eval</text>
+    <text x="800" y="458" text-anchor="middle" font-size="10" fill="#999">233 Objects | 449 Links</text>
+    <text x="800" y="473" text-anchor="middle" font-size="10" fill="#999">8 Types | 9 Link Types</text>
+  </g>
+
+  <!-- BiasPattern Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="971" y="310" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="971" y="310" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="986" y="332" font-size="15" font-weight="700" fill="#1a1a2e">BiasPattern</text>
+    <line x1="971" y1="342" x2="1236" y2="342" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="981" y="349" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="999" y="359" font-size="12" fill="#555">bias_type, severity</text>
+    <text x="981" y="381" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="999" y="381" font-size="12" fill="#555">affected_verdicts, rate</text>
+    <text x="984" y="403" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="999" y="403" font-size="12" fill="#555">suppress, escalate</text>
+    <text x="982" y="425" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="999" y="425" font-size="12" fill="#555">notify_on_critical</text>
+  </g>
+
+  <!-- Link labels Row 2 -->
+  <line x1="630" y1="397" x2="668" y2="397" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="637" y="391" font-size="9" fill="#888" font-weight="500">Link</text>
+  <line x1="933" y1="397" x2="971" y2="397" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="940" y="391" font-size="9" fill="#888" font-weight="500">Link</text>
+
+  <!-- ═══════════ ROW 3 ═══════════ -->
+
+  <!-- Category Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="365" y="535" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="365" y="535" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="380" y="557" font-size="15" font-weight="700" fill="#1a1a2e">Category</text>
+    <text x="455" y="557" font-size="11" fill="#888">(22 objects)</text>
+    <line x1="365" y1="567" x2="630" y2="567" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="375" y="574" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="393" y="584" font-size="12" fill="#555">name, module</text>
+    <text x="375" y="606" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="393" y="606" font-size="12" fill="#555">test_count, avg_accuracy</text>
+    <text x="378" y="628" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="393" y="628" font-size="12" fill="#555">add_tests</text>
+    <text x="376" y="650" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="393" y="650" font-size="12" fill="#555">coverage_alert</text>
+  </g>
+
+  <!-- CostRecord Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="668" y="535" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="668" y="535" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="683" y="557" font-size="15" font-weight="700" fill="#1a1a2e">CostRecord</text>
+    <line x1="668" y1="567" x2="933" y2="567" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="678" y="574" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="696" y="584" font-size="12" fill="#555">input_tokens, output_tokens</text>
+    <text x="678" y="606" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="696" y="606" font-size="12" fill="#555">cost_usd, cost_per_query</text>
+    <text x="681" y="628" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="696" y="628" font-size="12" fill="#555">set_budget_cap</text>
+    <text x="679" y="650" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="696" y="650" font-size="12" fill="#555">alert_budget_exceeded</text>
+  </g>
+
+  <!-- FailureMode Object Box -->
+  <g filter="url(#shadow)">
+    <rect x="971" y="535" width="265" height="175" rx="4" fill="white" stroke="#d4d0de" stroke-width="1"/>
+    <rect x="971" y="535" width="265" height="32" rx="4" fill="#fafafa"/>
+    <text x="986" y="557" font-size="15" font-weight="700" fill="#1a1a2e">FailureMode</text>
+    <line x1="971" y1="567" x2="1236" y2="567" stroke="#e8e6ed" stroke-width="1"/>
+    <rect x="981" y="574" width="12" height="10" rx="2" fill="#e8e6ed"/>
+    <text x="999" y="584" font-size="12" fill="#555">error_type, risk_level</text>
+    <text x="981" y="606" font-size="12" fill="#6b5b95" font-style="italic" font-weight="600">fx</text>
+    <text x="999" y="606" font-size="12" fill="#555">frequency, affected_categories</text>
+    <text x="984" y="628" font-size="13" fill="#e05050">&#x2191;</text>
+    <text x="999" y="628" font-size="12" fill="#555">create_fix_rule</text>
+    <text x="982" y="650" font-size="12" fill="#6b5b95">&#x21BB;</text>
+    <text x="999" y="650" font-size="12" fill="#555">trigger_retest_on_fix</text>
+  </g>
+
+  <!-- Link labels Row 3 -->
+  <line x1="630" y1="622" x2="668" y2="622" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="637" y="616" font-size="9" fill="#888" font-weight="500">Link</text>
+  <line x1="933" y1="622" x2="971" y2="622" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="940" y="616" font-size="9" fill="#888" font-weight="500">Link</text>
+
+  <!-- Vertical Link lines (connecting rows) -->
+  <!-- Column 1 -->
+  <line x1="497" y1="260" x2="497" y2="310" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="504" y="290" font-size="9" fill="#888" font-weight="500">TESTS</text>
+  <line x1="497" y1="485" x2="497" y2="535" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="504" y="515" font-size="9" fill="#888" font-weight="500">BELONGS_TO</text>
+
+  <!-- Column 2 (ONTOLOGY connections) -->
+  <line x1="800" y1="260" x2="800" y2="310" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="807" y="290" font-size="9" fill="#888" font-weight="500">PRODUCES</text>
+  <line x1="800" y1="485" x2="800" y2="535" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="807" y="515" font-size="9" fill="#888" font-weight="500">COSTS</text>
+
+  <!-- Column 3 -->
+  <line x1="1103" y1="260" x2="1103" y2="310" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="1110" y="290" font-size="9" fill="#888" font-weight="500">EVALUATED_IN</text>
+  <line x1="1103" y1="485" x2="1103" y2="535" stroke="#a0a0b0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="1110" y="515" font-size="9" fill="#888" font-weight="500">TRIGGERS</text>
+
+  <!-- Diagonal link: Verdict -> BiasPattern -->
+  <line x1="630" y1="420" x2="668" y2="420" stroke="#e05050" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- ═══════════ KEY STATS BANNER (bottom) ═══════════ -->
+  <rect x="330" y="760" width="940" height="75" rx="0 0 8 8" fill="#fafafa" stroke="#d4d0de" stroke-width="0" opacity="0.9"/>
+  <line x1="330" y1="760" x2="1270" y2="760" stroke="#d4d0de" stroke-width="1"/>
+
+  <!-- Stats in banner -->
+  <text x="410" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">53</text>
+  <text x="410" y="808" text-anchor="middle" font-size="10" fill="#888">TestCases</text>
+
+  <text x="530" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">8</text>
+  <text x="530" y="808" text-anchor="middle" font-size="10" fill="#888">Judges</text>
+
+  <text x="650" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">132</text>
+  <text x="650" y="808" text-anchor="middle" font-size="10" fill="#888">Verdicts</text>
+
+  <text x="770" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#6b5b95">449</text>
+  <text x="770" y="808" text-anchor="middle" font-size="10" fill="#888">Links</text>
+
+  <text x="890" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">4</text>
+  <text x="890" y="808" text-anchor="middle" font-size="10" fill="#888">EvalRuns</text>
+
+  <text x="1010" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#e05050">8</text>
+  <text x="1010" y="808" text-anchor="middle" font-size="10" fill="#888">Bias Patterns</text>
+
+  <text x="1160" y="788" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">92%</text>
+  <text x="1160" y="808" text-anchor="middle" font-size="10" fill="#888">Det. Accuracy</text>
+
+  <!-- Title text -->
+  <text x="800" y="878" text-anchor="middle" font-size="11" fill="#888" letter-spacing="1">
+    BIOMEDICAL CONTEXT LAYER  |  ONTOLOGY ENGINE  |  PALANTIR FOUNDRY HYDRATION PATTERN
+  </text>
+</svg>
